@@ -7,11 +7,11 @@ import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
 
-interface RetrofitServieces {
+interface RetrofitService {
     @GET("Tarif")
-    fun getTarifsList(): Call<List<Tarif>>
+    suspend fun getTarifsList(): List<Tarif>
     @GET("usluga")
-    fun getUslugaList(): Call<List<Usluga>>
+    suspend fun getUslugaList(): List<Usluga>
     @GET("profile/{id}")
-    fun getProfile(@Path("id") id: Int): Call<Profile>
+    suspend fun getProfile(@Path("id") id: Int): Profile
 }

@@ -4,8 +4,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
-    val retrofitService: RetrofitServieces
-        get() = RetrofitClient.getClient().create(RetrofitServieces::class.java)
+    val retrofitService: RetrofitService
+        get() = RetrofitClient.getClient().create(RetrofitService::class.java)
 
     private var retrofit: Retrofit? = null
 
